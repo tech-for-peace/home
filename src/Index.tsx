@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpg";
+import { Button } from "./button";
+import logo from "./assets/logo.jpg";
 
 const Index = () => {
   const handleFeedback = () => {
