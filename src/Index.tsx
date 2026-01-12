@@ -31,7 +31,13 @@ const Index = () => {
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
             We are a group of volunteers passionate about using technology
             to spread the message of peace from{" "}
-            <span className="font-semibold text-foreground">Prem Rawat</span>.
+            <a
+              href="https://premrawat.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="font-semibold text-foreground">Prem Rawat</span>
+            </a>.
           </p>
 
           <Button
