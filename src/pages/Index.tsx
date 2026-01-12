@@ -27,13 +27,9 @@ const Index = () => {
           </h1>
 
           {/* Mission Statement */}
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
             We are a group of volunteers passionate about using technology to spread the message of peace from{" "}
             <span className="font-semibold text-foreground">Prem Rawat</span>.
-          </p>
-
-          <p className="text-base md:text-lg text-muted-foreground mb-10">
-            Together, we believe technology can be a powerful tool for fostering understanding, compassion, and harmony in our world.
           </p>
 
           {/* Feedback Button */}
