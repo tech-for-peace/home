@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+@import url(
+  'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap'
+);
 
 @tailwind base;
 @tailwind components;
@@ -12,9 +14,6 @@
     --card: 0 0% 100%;
     --card-foreground: 220 20% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 20%;
-
     --primary: 175 60% 45%;
     --primary-foreground: 0 0% 100%;
 
@@ -27,9 +26,6 @@
     --accent: 100 55% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 210 30% 90%;
     --input: 210 30% 90%;
     --ring: 175 60% 45%;
@@ -40,9 +36,18 @@
     --peace-purple: 280 50% 65%;
     --peace-cyan: 175 60% 50%;
     --peace-green: 100 55% 50%;
-    
-    --gradient-peace: linear-gradient(135deg, hsl(280 50% 65%), hsl(175 60% 50%), hsl(100 55% 50%));
-    --gradient-peaceful-bg: radial-gradient(ellipse at top, hsl(210 40% 98%), hsl(175 30% 96%));
+
+    --gradient-peace: linear-gradient(
+      135deg,
+      hsl(280 50% 65%),
+      hsl(175 60% 50%),
+      hsl(100 55% 50%)
+    );
+    --gradient-peaceful-bg: radial-gradient(
+      ellipse at top,
+      hsl(210 40% 98%),
+      hsl(175 30% 96%)
+    );
   }
 
   * {
@@ -54,7 +59,12 @@
     font-family: 'Source Sans 3', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Quicksand', sans-serif;
   }
 }
@@ -67,26 +77,10 @@
     background-clip: text;
   }
 
-  .gradient-border {
-    position: relative;
-  }
-
-  .gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: var(--gradient-peace);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
-
   .peaceful-glow {
-    box-shadow: 0 0 60px -10px hsl(175 60% 50% / 0.3),
-                0 0 40px -15px hsl(280 50% 65% / 0.2);
+    box-shadow:
+      0 0 60px -10px hsl(175 60% 50% / 0.3),
+      0 0 40px -15px hsl(280 50% 65% / 0.2);
   }
 
   .float-animation {
@@ -94,8 +88,13 @@
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   .fade-in {
@@ -103,7 +102,13 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
