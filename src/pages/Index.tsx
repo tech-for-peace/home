@@ -1,13 +1,10 @@
 import { MessageCircle, FolderOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "./button";
+import { Button } from "../components/button";
 
 const Index = () => {
   const handleFeedback = () => {
-    window.open(
-      "https://github.com/tech-for-peace/home/issues/new",
-      "_blank"
-    );
+    window.open("https://github.com/tech-for-peace/home/issues/new", "_blank");
   };
 
   return (
@@ -30,15 +27,16 @@ const Index = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
-            We are a group of volunteers passionate about using technology
-            to spread the message of peace from{" "}
+            We are a group of volunteers passionate about using technology to
+            spread the message of peace from{" "}
             <a
               href="https://premrawat.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="font-semibold text-foreground">Prem Rawat</span>
-            </a>.
+            </a>
+            .
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -48,11 +46,7 @@ const Index = () => {
                 Projects
               </Button>
             </Link>
-            <Button
-              variant="peace"
-              size="lg"
-              onClick={handleFeedback}
-            >
+            <Button variant="peace" size="lg" onClick={handleFeedback}>
               <MessageCircle className="w-4 h-4" />
               Feedback
             </Button>
@@ -62,7 +56,8 @@ const Index = () => {
 
       <footer className="py-6 text-center text-sm text-muted-foreground">
         <p>
-          © {new Date().getFullYear()} techforpeace.co.in — Made with ❤️ for peace
+          © {new Date().getFullYear()} techforpeace.co.in — Made with ❤️ for
+          peace
         </p>
       </footer>
     </div>

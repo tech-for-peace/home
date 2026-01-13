@@ -1,7 +1,6 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "../button";
-
+import { Button } from "../components/button";
 import dishaPreview from "../assets/disha-preview.jpg";
 
 interface Project {

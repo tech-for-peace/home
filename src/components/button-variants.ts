@@ -9,8 +9,7 @@ export const buttonVariants = cva(
           "bg-gradient-to-r from-peace-purple via-peace-cyan to-peace-green text-white hover:opacity-90 hover:scale-105 shadow-md hover:shadow-lg transition-all duration-300",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        ghost:
-          "hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
       },
       size: {
         default: "h-10 px-4 py-2",

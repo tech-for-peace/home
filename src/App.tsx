@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Index from "./Index";
+import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 
 const App = () => (
