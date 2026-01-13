@@ -14,7 +14,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Disha",
-    description: "A platform to guide and support individuals on their journey towards inner peace.",
+    description: "Discover videos from Timeless Today and Prem Rawat official YouTube",
     url: "https://disha.techforpeace.co.in",
     image: dishaPreview,
   },
