@@ -41,18 +41,17 @@ const Index = () => {
             </a>.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/projects">
-              <Button variant="ghost" size="lg" className="text-foreground hover:text-peace-purple">
+              <Button variant="peace" size="lg">
                 <FolderOpen className="w-4 h-4" />
                 Projects
               </Button>
             </Link>
             <Button
-              variant="ghost"
+              variant="peace"
               size="lg"
               onClick={handleFeedback}
-              className="text-foreground hover:text-peace-purple"
             >
               <MessageCircle className="w-4 h-4" />
               Feedback
