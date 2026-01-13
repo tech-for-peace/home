@@ -1,9 +1,12 @@
 import * as React from "react";
 import { cn } from "../lib/utils";
-import { buttonVariants, type ButtonVariants } from "./button-variants";
+import { buttonVariants } from "./button-variants.ts";
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>, ButtonVariants {}
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "peace" | "outline" | "ghost";
+  size?: "default" | "sm" | "lg" | "icon";
+}
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {

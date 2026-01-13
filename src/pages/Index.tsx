@@ -1,6 +1,6 @@
 import { MessageCircle, FolderOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "../components/button";
+import { Button } from "@/components/button";
 
 const Index = () => {
   const handleFeedback = () => {
@@ -16,7 +16,7 @@ const Index = () => {
         <div className="max-w-2xl mx-auto text-center fade-in">
           <div className="mb-8 float-animation">
             <img
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Tech for Peace Logo"
               className="w-40 h-40 md:w-52 md:h-52 mx-auto object-contain peaceful-glow rounded-full bg-card p-4"
             />
