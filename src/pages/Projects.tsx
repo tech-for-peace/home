@@ -2,10 +2,13 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "../button";
 
+import dishaPreview from "../assets/disha-preview.jpg";
+
 interface Project {
   name: string;
   description: string;
   url: string;
+  image?: string;
 }
 
 const projects: Project[] = [
@@ -13,6 +16,7 @@ const projects: Project[] = [
     name: "Disha",
     description: "A platform to guide and support individuals on their journey towards inner peace.",
     url: "https://disha.techforpeace.co.in",
+    image: dishaPreview,
   },
 ];
 
@@ -49,17 +53,28 @@ const Projects = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border/50 hover:border-peace-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-peace-purple/10"
+                className="group block rounded-2xl bg-card/80 backdrop-blur-sm border border-border/50 hover:border-peace-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-peace-purple/10 overflow-hidden"
               >
-                <div className="flex items-start justify-between mb-3">
-                  <h2 className="text-xl font-semibold text-foreground group-hover:text-peace-purple transition-colors">
-                    {project.name}
-                  </h2>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-peace-purple transition-colors" />
+                {project.image && (
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+                <div className="p-5">
+                  <div className="flex items-start justify-between mb-2">
+                    <h2 className="text-lg font-semibold text-foreground group-hover:text-peace-purple transition-colors">
+                      {project.name}
+                    </h2>
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-peace-purple transition-colors" />
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {project.description}
-                </p>
               </a>
             ))}
           </div>
