@@ -1,4 +1,5 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, FolderOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "./button";
 
 const Index = () => {
@@ -40,15 +41,23 @@ const Index = () => {
             </a>.
           </p>
 
-          <Button
-            variant="peace"
-            size="lg"
-            onClick={handleFeedback}
-            className="font-semibold"
-          >
-            <MessageCircle className="w-5 h-5" />
-            Share Feedback
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/projects">
+              <Button variant="peace" size="lg" className="font-semibold w-full sm:w-auto">
+                <FolderOpen className="w-5 h-5" />
+                Our Projects
+              </Button>
+            </Link>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={handleFeedback}
+              className="font-semibold"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Share Feedback
+            </Button>
+          </div>
         </div>
       </main>
 
