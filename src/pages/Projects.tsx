@@ -29,7 +29,7 @@ const Projects = () => {
       <header className="px-4 py-6">
         <div className="max-w-4xl mx-auto">
           <Link to="/">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
+            <Button variant="ghost" size="sm" className="text-peace-purple hover:text-peace-purple/80 hover:bg-peace-purple/10">
               <ArrowLeft className="w-4 h-4" />
               Back to Home
             </Button>
