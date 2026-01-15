@@ -39,14 +39,14 @@ const Index = () => {
             .
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/projects">
-              <Button variant="peace" size="lg">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+            <Link to="/projects" className="w-full sm:w-auto">
+              <Button variant="peace" size="lg" className="w-full sm:w-auto">
                 <FolderOpen className="w-4 h-4" />
                 Projects
               </Button>
             </Link>
-            <Button variant="peace" size="lg" onClick={handleFeedback}>
+            <Button variant="peace" size="lg" onClick={handleFeedback} className="w-full sm:w-auto">
               <MessageCircle className="w-4 h-4" />
               Feedback
             </Button>
