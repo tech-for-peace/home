@@ -36,12 +36,12 @@ const Index = () => {
           </div>
 
           {/* Project Card */}
-          <div className="fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="fade-in flex justify-center" style={{ animationDelay: "0.2s" }}>
             <a
               href="https://disha.techforpeace.co.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl bg-card border border-border/60 hover:border-peace-purple/40 transition-all duration-300 overflow-hidden peaceful-glow hover:scale-[1.02]"
+              className="group block max-w-xs rounded-xl bg-card border border-border/60 hover:border-peace-purple/40 transition-all duration-300 overflow-hidden peaceful-glow hover:scale-[1.02]"
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -50,15 +50,15 @@ const Index = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <h2 className="text-xl font-semibold text-foreground group-hover:text-peace-purple transition-colors">
+              <div className="p-4">
+                <div className="flex items-center justify-between mb-1">
+                  <h2 className="text-lg font-semibold text-foreground group-hover:text-peace-purple transition-colors">
                     Disha
                   </h2>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-peace-purple transition-colors" />
+                  <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-peace-purple transition-colors" />
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Discover videos from Timeless Today and Prem Rawat's official YouTube channels.
+                <p className="text-sm text-muted-foreground">
+                  Discover videos from Timeless Today and Prem Rawat's official YouTube.
                 </p>
               </div>
             </a>
