@@ -47,8 +47,8 @@ const Index = () => {
           </div>
 
           {/* Projects Section */}
-          <div className="fade-in">
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="fade-in mt-6 flex justify-center">
+            <div className="w-full max-w-sm">
               {projects.map((project) => (
                 <a
                   key={project.name}
