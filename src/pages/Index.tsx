@@ -19,10 +19,7 @@ const projects: Project[] = [
 
 const Index = () => {
   return (
-    <div
-      className="min-h-screen flex flex-col"
-      style={{ background: "var(--gradient-peaceful-bg)" }}
-    >
+    <div className="min-h-screen flex flex-col" style={{ background: "var(--gradient-peaceful-bg)" }}>
       <main className="flex-1 px-4 py-10">
         <div className="max-w-3xl mx-auto">
           {/* Hero Section */}
@@ -33,12 +30,10 @@ const Index = () => {
               className="w-28 h-28 md:w-36 md:h-36 mx-auto object-contain rounded-full bg-card p-3 mb-5"
             />
 
-            <h1 className="text-3xl md:text-4xl font-bold mb-3 gradient-text">
-              Tech for Peace
-            </h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-3 gradient-text">Tech for Peace</h1>
 
             <p className="text-base text-muted-foreground max-w-lg mx-auto">
-              Volunteers using technology to spread the message of peace from{" "}
+              We are a group of volunteers passionate about using technology to spread the message of peace from{" "}
               <a
                 href="https://premrawat.com"
                 target="_blank"
@@ -53,9 +48,7 @@ const Index = () => {
 
           {/* Projects Section */}
           <div className="fade-in">
-            <h2 className="text-xl md:text-2xl font-semibold mb-5 gradient-text text-center">
-              Projects
-            </h2>
+            <h2 className="text-xl md:text-2xl font-semibold mb-5 gradient-text text-center">Projects</h2>
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {projects.map((project) => (
@@ -82,9 +75,7 @@ const Index = () => {
                       </h3>
                       <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-peace-purple transition-colors" />
                     </div>
-                    <p className="text-muted-foreground text-sm">
-                      {project.description}
-                    </p>
+                    <p className="text-muted-foreground text-sm">{project.description}</p>
                   </div>
                 </a>
               ))}
