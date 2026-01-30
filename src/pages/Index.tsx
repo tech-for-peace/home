@@ -48,8 +48,6 @@ const Index = () => {
 
           {/* Projects Section */}
           <div className="fade-in">
-            <h2 className="text-xl md:text-2xl font-semibold mb-5 gradient-text text-center">Projects</h2>
-
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {projects.map((project) => (
                 <a
