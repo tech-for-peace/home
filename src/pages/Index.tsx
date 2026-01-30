@@ -8,7 +8,7 @@ const Index = () => {
         <div className="max-w-2xl mx-auto">
           {/* Hero Section */}
           <div className="text-center fade-in mb-16">
-            <div className="inline-block mb-8">
+            <div className="inline-block mb-4">
               <img
                 src="/logo.png"
                 alt="Tech for Peace Logo"
