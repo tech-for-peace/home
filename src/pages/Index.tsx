@@ -4,11 +4,11 @@ import dishaPreview from "../assets/disha-preview.jpg";
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: "var(--gradient-peaceful-bg)" }}>
-      <main className="flex-1 px-6 py-16 md:py-24">
+      <main className="flex-1 px-6 py-8 md:py-12">
         <div className="max-w-2xl mx-auto">
           {/* Hero Section */}
           <div className="text-center fade-in mb-16">
-            <div className="inline-block mb-4">
+            <div className="inline-block mb-2">
               <img
                 src="/logo.png"
                 alt="Tech for Peace Logo"
