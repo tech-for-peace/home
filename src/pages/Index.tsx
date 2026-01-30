@@ -12,7 +12,7 @@ const Index = () => {
               <img
                 src="/logo.png"
                 alt="Tech for Peace Logo"
-                className="w-24 h-24 md:w-32 md:h-32 mx-auto object-contain rounded-full bg-card peaceful-glow p-4 float-animation"
+                className="w-36 h-36 md:w-44 md:h-44 mx-auto object-contain rounded-full bg-card peaceful-glow float-animation"
               />
             </div>
 
