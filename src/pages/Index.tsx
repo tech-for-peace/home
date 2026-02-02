@@ -59,7 +59,7 @@ const Index = () => {
                   <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-peace-purple transition-colors" />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Discover videos from Timeless Today and Prem Rawat's official YouTube.
+                  Discover 2000+ videos from Timeless Today, YouTube, and Spotify.
                 </p>
               </div>
             </a>
@@ -85,7 +85,7 @@ const Index = () => {
                   <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-peace-purple transition-colors" />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Stream and share video clips from peace events and gatherings.
+                  Extract and trim video clips in your browser—no uploads needed.
                 </p>
               </div>
             </a>
