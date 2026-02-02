@@ -85,7 +85,7 @@ const Index = () => {
                   <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-peace-purple transition-colors" />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Extract and trim video clips in your browser—no uploads needed.
+                  Fast video clipping in your browser. No data sent to any server.
                 </p>
               </div>
             </a>
