@@ -1,5 +1,6 @@
 import { ExternalLink, Heart } from "lucide-react";
 import dishaPreview from "../assets/disha-preview.jpg";
+import clipstreamPreview from "../assets/clipstream-preview.jpg";
 
 const Index = () => {
   return (
@@ -35,8 +36,8 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Project Card */}
-          <div className="fade-in flex justify-center" style={{ animationDelay: "0.2s" }}>
+          {/* Project Cards */}
+          <div className="fade-in flex flex-wrap justify-center gap-6" style={{ animationDelay: "0.2s" }}>
             <a
               href="https://disha.techforpeace.co.in"
               target="_blank"
@@ -59,6 +60,32 @@ const Index = () => {
                 </div>
                 <p className="text-sm text-muted-foreground">
                   Discover videos from Timeless Today and Prem Rawat's official YouTube.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="https://clipstream.techforpeace.co.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block max-w-xs rounded-xl bg-card border border-border/60 hover:border-peace-purple/40 transition-all duration-300 overflow-hidden peaceful-glow hover:scale-[1.02]"
+            >
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={clipstreamPreview}
+                  alt="ClipStream - Video streaming platform"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-4">
+                <div className="flex items-center justify-between mb-1">
+                  <h2 className="text-lg font-semibold text-foreground group-hover:text-peace-purple transition-colors">
+                    ClipStream
+                  </h2>
+                  <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-peace-purple transition-colors" />
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Stream and share video clips from peace events and gatherings.
                 </p>
               </div>
             </a>
