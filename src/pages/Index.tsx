@@ -1,10 +1,11 @@
 import { ExternalLink, Heart } from "lucide-react";
-import dishaPreview from "../assets/disha-preview.jpg";
-import clipstreamPreview from "../assets/clipstream-preview.jpg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "var(--gradient-peaceful-bg)" }}>
+    <div
+      className="min-h-screen flex flex-col"
+      style={{ background: "var(--gradient-peaceful-bg)" }}
+    >
       <main className="flex-1 px-6 py-8 md:py-12">
         <div className="max-w-2xl mx-auto">
           {/* Hero Section */}
@@ -37,7 +38,10 @@ const Index = () => {
           </div>
 
           {/* Project Cards */}
-          <div className="fade-in flex flex-wrap justify-center gap-6" style={{ animationDelay: "0.2s" }}>
+          <div
+            className="fade-in flex flex-wrap justify-center gap-6"
+            style={{ animationDelay: "0.2s" }}
+          >
             <a
               href="https://disha.techforpeace.co.in"
               target="_blank"
@@ -46,7 +50,7 @@ const Index = () => {
             >
               <div className="aspect-video overflow-hidden">
                 <img
-                  src={dishaPreview}
+                  src="/disha-preview.jpg"
                   alt="Disha - Video discovery platform"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -59,7 +63,8 @@ const Index = () => {
                   <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-peace-purple transition-colors" />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Discover 2000+ videos from Timeless Today, YouTube, and Spotify.
+                  Discover 2000+ videos from Timeless Today, YouTube, and
+                  Spotify.
                 </p>
               </div>
             </a>
@@ -72,7 +77,7 @@ const Index = () => {
             >
               <div className="aspect-video overflow-hidden">
                 <img
-                  src={clipstreamPreview}
+                  src="/clipstream-preview.jpg"
                   alt="ClipStream - Video streaming platform"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -85,7 +90,8 @@ const Index = () => {
                   <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-peace-purple transition-colors" />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Fast video clipping in your browser. No data sent to any server.
+                  Fast video clipping in your browser. No data sent to any
+                  server.
                 </p>
               </div>
             </a>
@@ -95,7 +101,9 @@ const Index = () => {
 
       <footer className="py-6 text-center">
         <p className="text-sm text-muted-foreground flex items-center justify-center gap-1.5">
-          Made with <Heart className="w-3.5 h-3.5 text-peace-purple fill-peace-purple" /> by techforpeace.co.in
+          Made with{" "}
+          <Heart className="w-3.5 h-3.5 text-peace-purple fill-peace-purple" />{" "}
+          by techforpeace.co.in
         </p>
       </footer>
     </div>
