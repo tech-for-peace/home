@@ -3,27 +3,29 @@ import globals from "globals";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
-export default [
+export default tseslint.config(
   { ignores: ["dist"] },
   {
-    ...js.configs.recommended,
+    files: ["vite.config.ts"],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
-      parser: tseslint.parser,
     },
     plugins: {
-      "@typescript-eslint": tseslint.plugin,
       "react-refresh": reactRefresh,
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
       "react-refresh/only-export-components": [
-        "warn",
+        "error",
         { allowConstantExport: true },
       ],
-      "@typescript-eslint/no-unused-vars": "off",
     },
   },
-];
+);

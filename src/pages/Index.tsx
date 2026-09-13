@@ -25,6 +25,14 @@ const projects = [
     description:
       "Upload your photo and get four framed DP versions to download or share.",
   },
+  {
+    href: "https://m.techforpeace.co.in",
+    image: "/m-preview.jpg",
+    alt: "M - Meditation timekeeper",
+    title: "M",
+    description:
+      "Keep track of time during meditation. A quiet 60-minute clock with a chime every 15 minutes.",
+  },
 ] as const;
 
 const ProjectCard = ({
@@ -38,85 +46,83 @@ const ProjectCard = ({
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="group block w-full rounded-xl bg-card border border-border/60 hover:border-peace-purple/40 transition-all duration-300 overflow-hidden peaceful-glow hover:scale-[1.02] sm:last:col-span-2 sm:last:max-w-md sm:last:justify-self-center lg:last:col-span-1 lg:last:max-w-none lg:last:justify-self-stretch"
+    className="peaceful-glow group block w-full overflow-hidden rounded-xl border border-border/60 bg-card transition-all duration-300 hover:scale-[1.02] hover:border-peace-purple/40"
   >
     <div className="aspect-video overflow-hidden">
       <img
         src={image}
         alt={alt}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
     </div>
     <div className="p-4 sm:p-5">
-      <div className="flex items-center justify-between mb-1">
-        <h2 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-peace-purple transition-colors">
+      <div className="mb-1 flex items-center justify-between">
+        <h2 className="text-lg font-semibold text-foreground transition-colors group-hover:text-peace-purple sm:text-xl">
           {title}
         </h2>
-        <ExternalLink className="w-3.5 h-3.5 shrink-0 text-muted-foreground group-hover:text-peace-purple transition-colors" />
+        <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-peace-purple" />
       </div>
-      <p className="text-sm sm:text-base text-muted-foreground">{description}</p>
+      <p className="text-sm text-muted-foreground sm:text-base">
+        {description}
+      </p>
     </div>
   </a>
 );
 
-const Index = () => {
-  return (
-    <div
-      className="min-h-screen flex flex-col"
-      style={{ background: "var(--gradient-peaceful-bg)" }}
-    >
-      <main className="flex-1 px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12">
-        <div className="max-w-6xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center fade-in mb-10 sm:mb-12 md:mb-16 max-w-2xl mx-auto">
-            <div className="inline-block mb-2">
-              <img
-                src="/logo.png"
-                alt="Tech for Peace Logo"
-                className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 mx-auto object-contain rounded-full bg-card peaceful-glow float-animation"
-              />
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 gradient-text">
-              Tech for Peace
-            </h1>
-
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto px-1">
-              We are volunteers passionate about using technology to share the
-              message of peace from{" "}
-              <a
-                href="https://premrawat.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-foreground hover:text-peace-purple transition-colors underline decoration-peace-purple/30 hover:decoration-peace-purple"
-              >
-                Prem Rawat
-              </a>
-              .
-            </p>
+const Index = () => (
+  <div
+    className="flex min-h-screen flex-col"
+    style={{ background: "var(--gradient-peaceful-bg)" }}
+  >
+    <main className="flex-1 px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12">
+      <div className="mx-auto max-w-6xl">
+        <div className="fade-in mx-auto mb-10 max-w-2xl text-center sm:mb-12 md:mb-16">
+          <div className="mb-2 inline-block">
+            <img
+              src="/logo.png"
+              alt="Tech for Peace Logo"
+              className="float-animation peaceful-glow mx-auto h-28 w-28 rounded-full bg-card object-contain sm:h-36 sm:w-36 md:h-44 md:w-44"
+            />
           </div>
 
-          {/* Project Cards */}
-          <div
-            className="fade-in grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
-            style={{ animationDelay: "0.2s" }}
-          >
-            {projects.map((project) => (
-              <ProjectCard key={project.href} {...project} />
-            ))}
-          </div>
+          <h1 className="gradient-text mb-4 text-3xl font-bold sm:mb-6 sm:text-4xl md:text-5xl">
+            Tech for Peace
+          </h1>
+
+          <p className="mx-auto max-w-xl px-1 text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
+            We are volunteers passionate about using technology to share the
+            message of peace from{" "}
+            <a
+              href="https://premrawat.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-foreground underline decoration-peace-purple/30 transition-colors hover:text-peace-purple hover:decoration-peace-purple"
+            >
+              Prem Rawat
+            </a>
+            .
+          </p>
         </div>
-      </main>
 
-      <footer className="px-4 py-6 text-center">
-        <p className="text-sm text-muted-foreground flex flex-wrap items-center justify-center gap-1.5">
-          Made with{" "}
-          <Heart className="w-3.5 h-3.5 text-peace-purple fill-peace-purple" />{" "}
-          by techforpeace.co.in
-        </p>
-      </footer>
-    </div>
-  );
-};
+        <div
+          className="fade-in grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4"
+          style={{ animationDelay: "0.2s" }}
+        >
+          {projects.map((project) => (
+            <ProjectCard key={project.href} {...project} />
+          ))}
+        </div>
+      </div>
+    </main>
+
+    <footer className="px-4 py-6 text-center">
+      <p className="flex flex-wrap items-center justify-center gap-1.5 text-sm text-muted-foreground">
+        Made with{" "}
+        <Heart className="h-3.5 w-3.5 fill-peace-purple text-peace-purple" /> by
+        techforpeace.co.in
+      </p>
+    </footer>
+  </div>
+);
 
 export default Index;
